@@ -19,7 +19,7 @@ export default function Home() {
 const Hero = () => {
   return (
     <>
-      <div className="-mt-4 flex min-h-screen justify-center items-center flex-col">
+      <div className="-mt-8 flex min-h-screen justify-center items-center flex-col">
         <Image className="rounded-full" alt="Afix's Profile Picture" src="/mypicture.png" width="150" height="150" />
         <h2 className="font-semibold mt-3 text-4xl">Hi, I am Afix 👋</h2>
         <p>Information Engineering Undergraduate Student</p>
