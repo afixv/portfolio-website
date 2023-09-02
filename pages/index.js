@@ -5,11 +5,6 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <Head>
-        <title key="pagetitle">Afix Vega</title>
-        <meta name="description" content="Afix Vega - Welcome to My Portfolio" key="metadescription" />
-        <link rel="icon" href="/afixicon.svg" />
-      </Head>
       <div className="min-h-screen">
         <main>
           <Hero />
@@ -41,9 +36,9 @@ const Hero = () => {
 const About = () => {
   return (
     <>
-      <div className="flex justify-center">
+      <div id="about" className="flex justify-center pt-20">
         <div className="max-w-[800px] self-center flex flex-col mx-10 text-center">
-          <h2 id="about" className="font-semibold mt-3">
+          <h2 className="font-semibold">
             Hello, it’s me! 😉
           </h2>
           <p className="text-justify md:text-center">
@@ -59,12 +54,12 @@ const About = () => {
 const Projects = () => {
   return (
     <>
-      <div className="max-w-[900px] mx-auto px-5 mt-20">
-        <div className="flex flex-col">
-          <h2 className="text-center md:text-right">🚀 Highlight Project </h2>
-          <p className=" text-center md:text-right">
-            These are some of the projects I have created. These projects have not only helped <br /> me build my portfolio, but also enhanced the skills I have developed.
-          </p>
+      <div className="max-w-[900px] mx-auto px-10 mt-20">
+        <div className="flex md:justify-end">
+          <div className="flex flex-col md:w-2/3">
+            <h2 className="text-center md:text-right">🚀 Highlight Project </h2>
+            <p className=" text-center md:text-right">These are some of the projects I have created. These projects have not only helped me build my portfolio, but also enhanced the skills I have developed.</p>
+          </div>
         </div>
 
         <div className="flex flex-col mx-10"></div>

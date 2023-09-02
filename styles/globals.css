@@ -7,10 +7,10 @@
 }
 
 :root {
-  --c-primary: #1A1A1A;
-  --c-secondary: #595E70;
-  --c-black-grey: #2D2D2D;
-  --c-body: #B7B7B7;
+  --c-primary: #1a1a1a;
+  --c-secondary: #595e70;
+  --c-black-grey: #2d2d2d;
+  --c-body: #b7b7b7;
   --c-body-fade: #898989;
 }
 
@@ -20,13 +20,19 @@ body {
 }
 
 h2 {
-  font-size: 2.25rem;
+  font-size: 28px;
   font-weight: 600;
+  @media (min-width: 768px) {
+    font-size: 2.25rem;
+  }
 }
 
 p {
-  font-size: 1rem;
+  font-size: 12px;
   color: var(--c-body);
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
 }
 
 /* Scroll Bar */
