@@ -34,3 +34,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #535353;
 }
+
+::selection {
+  background-color: var(--c-secondary);
+}
