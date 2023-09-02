@@ -27,12 +27,17 @@ h2 {
   }
 }
 
-p {
+.text-body {
   font-size: 12px;
   color: var(--c-body);
   @media (min-width: 768px) {
     font-size: 1rem;
   }
+}
+
+.bgCard {
+  background: linear-gradient(109deg, rgba(88, 92, 110, 0.68) -29.48%, rgba(89, 94, 112, 0) 105.76%);
+  border: 1px solid var(--c-secondary);
 }
 
 /* Scroll Bar */
