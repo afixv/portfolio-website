@@ -56,13 +56,13 @@ const Projects = () => {
     <>
       <div className="max-w-[1080px] mx-auto px-10 mt-20">
         <div className="flex md:justify-end">
-          <div className="flex flex-col md:w-2/3">
+          <div className="flex flex-col md:w-2/3 md:mr-7">
             <h2 className="text-center md:text-right">🚀 Highlight Project </h2>
             <p className=" text-body text-center md:text-right">These are some of the projects I have created. These projects have not only helped me build my portfolio, but also enhanced the skills I have developed.</p>
           </div>
         </div>
 
-        <div className="flex justify-center mt-6 flex-wrap gap-4 mx-10">
+        <div className="flex justify-center mt-6 flex-wrap gap-4">
           <CardProject/>
           <CardProject/>
           <CardProject/>
