@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Button = ({ children, size, onClick, className }) => {
   const buttonSize = {
-    md: "text-xs px-4 py-2",
+    md: "text-xs px-4 py-2 max-w-[140px]",
     lg: "text-sm px-5 py-3",
   };
   const sizeClassName = buttonSize[size || "md"];
