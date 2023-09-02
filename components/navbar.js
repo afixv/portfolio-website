@@ -11,7 +11,7 @@ export default function Navbar() {
     <>
       <div className="flex justify-between mx-auto container max-w-[1120px] mt-8 z-10 px-10">
         <Link href="/" className="items-center flex">
-          <Image src="logo.svg" alt="Logo" width="32" height="32" />
+          <Image className="hover:opacity-40 transition-all" src="logo.svg" alt="Logo" width="32" height="32" />
         </Link>
         <div className="flex items-center">
           <ul className="flex justify-end text-lg gap-4 [&>li:hover]:text-c-body-fade font-medium [&>li>a]:transition-all">
