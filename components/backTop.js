@@ -19,7 +19,7 @@ export default function BackTop() {
     };
     const handleScroll = () => {
       const scrollToTopButton = document.querySelector("[data-backToTopButton]");
-      if (isScrollingDown() || window.pageYOffset === 0) {
+      if (isScrollingDown() || window.pageYOffset < 80) {
         scrollToTopButton.classList.add("-bottom-16", "invisible");
         scrollToTopButton.classList.remove("bottom-8", "visible");
       } else {
@@ -32,7 +32,7 @@ export default function BackTop() {
 
   return (
     <>
-      <button data-backToTopButton onClick={scrollToTop} className="hover:opacity-80 transition-all w-12 h-12 flex items-center bg-c-secondary-fade z-10 fixed bottom-8 right-8 rounded-xl">
+      <button data-backToTopButton onClick={scrollToTop} className="hover:opacity-80 transition-all w-12 h-12 flex items-center bg-c-secondary-fade z-10 fixed bottom-8 right-8 rounded-xl duration-300">
         <Image className="z-20 mx-auto pointer-events-none" src="cursortop.svg" alt="Cursor Top" width="16" height="20" />
       </button>
     </>
