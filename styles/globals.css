@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-behavior: smooth;
+}
+
 :root {
   --c-primary: #1A1A1A;
   --c-secondary: #595E70;
@@ -15,7 +19,17 @@ body {
   background: var(--c-primary);
 }
 
-/* Scrpll Bar */
+h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--c-body);
+}
+
+/* Scroll Bar */
 ::-webkit-scrollbar {
   width: 10px;
 }
