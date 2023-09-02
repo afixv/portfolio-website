@@ -14,6 +14,7 @@ module.exports = {
         "c-black-grey": "#2D2D2D",
         "c-body": "#B7B7B7",
         "c-body-fade": "#898989",
+        "c-button": '#F5F5F5'
       },
     },
   },
