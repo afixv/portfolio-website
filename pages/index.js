@@ -24,7 +24,7 @@ export default function Home() {
             <Link href="#">
               <Image className="mt-20 animate-bounce pointer-events-none" alt="arrow" src="/arrowdown.svg" width="18" height="18" />
             </Link>
-            <Image className="absolute ml-[200px] mt-[300px] " src='/scratch.svg' alt='scratch style' width='200' height='200' />
+            <Image className="absolute ml-[200px] mt-[300px] pointer-events-none" src='/scratch.svg' alt='scratch style' width='200' height='200' />
           </div>
         </main>
       </div>
