@@ -14,3 +14,23 @@ body {
   color: white;
   background: var(--c-primary);
 }
+
+/* Scrpll Bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--c-black-grey);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #646464;
+  transition: 0.3s;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #535353;
+}
