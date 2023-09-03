@@ -32,7 +32,7 @@ export default function BackTop() {
 
   return (
     <>
-      <button data-backToTopButton onClick={scrollToTop} className="hover:opacity-80 transition-all w-12 h-12 flex items-center bg-c-secondary-fade z-10 fixed bottom-8 right-8 rounded-xl duration-300">
+      <button data-backToTopButton onClick={scrollToTop} className="backdrop-blur-sm hover:opacity-80 transition-all w-12 h-12 flex items-center bg-c-secondary-fade z-10 fixed bottom-8 right-8 rounded-xl duration-300">
         <Image className="z-20 mx-auto pointer-events-none" src="cursortop.svg" alt="Cursor Top" width="16" height="20" />
       </button>
     </>
