@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/button";
 import CardProject from "@/components/cardProjects";
+import CardIcon from "@/components/cardIcon";
 
 export default function Home() {
   return (
@@ -12,6 +13,8 @@ export default function Home() {
           <Hero />
           <About />
           <Projects />
+          <Skills />
+          <Blog />
         </main>
       </div>
     </>
@@ -21,10 +24,14 @@ export default function Home() {
 const Hero = () => {
   return (
     <>
-      <div className="-mt-8 flex min-h-screen justify-center items-center flex-col">
+      <div className="-mt-8 mx-5 flex min-h-screen justify-center items-center flex-col">
         <Image className="rounded-full" alt="Afix's Profile Picture" src="/mypicture.png" width="150" height="150" />
-        <h2 className="font-semibold mt-3 text-4xl">Hi, I am Afix 👋</h2>
-        <p className="text-body">Information Engineering Undergraduate Student</p>
+        <div className="flex items-center mx-auto">
+          <h2 className=" text-center font-semibold mt-3 text-4xl">Hi, I am Afix</h2>
+          <span className="text-center text-4xl animate-waving flex justify-center">👋</span>
+        </div>
+
+        <p className="text-center text-body">Information Engineering Undergraduate Student</p>
         <h1 className="font-semibold mx-10 text-[28px] md:text-[40px] md:w-[600px] text-center heigh leading-tight mt-6">Explore the future with captivating UI/UX design and front-end abilities.</h1>
         <Link href="#about">
           <Image className="mt-20 animate-bounce pointer-events-none" alt="arrow" src="/arrowdown.svg" width="18" height="18" />
@@ -54,18 +61,23 @@ const About = () => {
 const Projects = () => {
   return (
     <>
-      <div className="max-w-[1080px] mx-auto px-10 mt-20">
+      <div className="md:max-w-[1080px] mx-auto px-10 mt-20">
         <div className="flex md:justify-end">
           <div className="flex flex-col md:w-2/3 md:mr-7">
             <h2 className="text-center md:text-right">🚀 Highlight Project </h2>
-            <p className=" text-body text-center md:text-right">These are some of the projects I have created. These projects have not only helped me build my portfolio, but also enhanced the skills I have developed.</p>
+            <p className=" text-desc text-center md:text-right">These are some of the projects I have created. These projects have not only helped me build my portfolio, but also enhanced the skills I have developed.</p>
+          </div>
+        </div>
+        <div className="max-w-[400px] md:max-w-[1080px] mx-auto">
+          <div className=" flex justify-center mt-6 flex-wrap gap-4">
+            <CardProject />
+            <CardProject />
+            <CardProject />
           </div>
         </div>
 
-        <div className="flex justify-center mt-6 flex-wrap gap-4">
-          <CardProject/>
-          <CardProject/>
-          <CardProject/>
+        <div className="mt-6 flex justify-center">
+          <Button>View All</Button>
         </div>
       </div>
     </>
@@ -73,10 +85,33 @@ const Projects = () => {
 };
 
 const Skills = () => {
+  const iconData = [
+    { id: 1, icon: "Figma", color: "text-white" },
+    { id: 2, icon: "Photoshop", color: "text-white" },
+    { id: 3, icon: "AI", color: "text-white" },
+    { id: 4, icon: "Js", color: "text-white" },
+    { id: 5, icon: "Cpp", color: "text-white" },
+    { id: 6, icon: "ReactBrand", color: "text-white" },
+    { id: 7, icon: "NextJs", color: "text-white" },
+    { id: 8, icon: "Tailwind", color: "text-white" },
+    { id: 9, icon: "Antd", color: "text-white" },
+    { id: 10, icon: "Pg", color: "text-white" },
+  ];
   return (
     <>
-      <div>
-        <h2>Specialized Skills 👨‍💻 </h2>
+      <div className="-z-10  bgSection md:rounded-r-[50px] h-[32rem] md:h-[30rem] absolute mt-20 w-full md:w-[80%]"></div>
+      <div className="flex-col px-10 max-w-[1080px] mx-auto mt-32">
+        <div className="flex flex-col md:ml-7">
+          <h2>Specialized Skills 👨‍💻 </h2>
+          <p className="text-desc sm:w-2/3">These are some of the projects I have created. These projects have not only helped me build my portfolio, but also enhanced the skills I have developed.</p>
+        </div>
+        <div className="mt-10 max-w-[400px] md:max-w-[700px] mx-auto">
+          <div className=" flex justify-center mt-6 flex-wrap gap-4 md:gap-12">
+            {iconData.map((data) => (
+              <CardIcon key={data.id} color={data.color} icon={data.icon} />
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );
@@ -85,9 +120,7 @@ const Skills = () => {
 const Blog = () => {
   return (
     <>
-      <div>
-        <h2>✏️Latest Blog </h2>
-      </div>
+      <div></div>
     </>
   );
 };
