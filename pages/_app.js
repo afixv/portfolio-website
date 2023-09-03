@@ -5,6 +5,7 @@ import BackTop from "@/components/backTop";
 import { Work_Sans } from "next/font/google";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Footer from "@/components/footer";
 
 const worksans = Work_Sans({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function App({ Component, pageProps }) {
         <Navbar />
         <BackTop />
         <Component {...pageProps} />
+        <Footer />
       </main>
     </>
   );
