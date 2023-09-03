@@ -1,8 +1,7 @@
 import Image from "next/image";
-import { Button } from "./button";
 import Link from "next/link";
 
-export default function CardBlog({ className }) {
+export default function CardProject({ className }) {
   return (
     <>
       <div className={`${className} backdrop-blur-sm rounded-xl w-full min-h-[16rem] md:w-[30%] bgCard hover:-translate-y-1.5  hover:opacity-80 transition-all h-max-content`}>
