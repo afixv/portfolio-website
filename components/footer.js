@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <>
-      <div className="mt-20 md:max-w-[1080px] mx-auto pt-32 px-10 pb-16 relative bottom-0 w-full bgFooter">
+      <footer className="mt-20 md:max-w-[1080px] mx-auto pt-32 px-10 pb-16 relative bottom-0 w-full bgFooter">
         <Image className="absolute right-2 bottom-16" alt="Icon Outlined" src={"/afixiconoutlined.png"} width={280} height={280}></Image>
         <div className="flex md:justify-start">
           <div className="flex flex-col  md:ml-7">
@@ -20,7 +20,7 @@ export default function Footer() {
             <span className="text-c-body text-sm md:text-base font-normal mt-16">© 2023 Afix Vega Praditya</span>
           </div>
         </div>
-      </div>
+      </footer>
     </>
   );
 }
