@@ -3,7 +3,7 @@ import Image from "next/image";
 export const Button = ({ children, size, onClick, className }) => {
   const buttonSize = {
     md: "text-xs px-4 py-2 max-w-[140px]",
-    lg: "text-sm px-5 py-3",
+    lg: "text-sm px-5 py-3 max-w-[170px]",
   };
   const sizeClassName = buttonSize[size || "md"];
   const imageWidth = size === "lg" ? 30 : 25;
