@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/button";
 import CardProject from "@/components/cardProjects";
 import CardIcon from "@/components/cardIcon";
+import CardBlog from "@/components/cardBlog";
 
 export default function Home() {
   return (
@@ -69,7 +70,7 @@ const Projects = () => {
           </div>
         </div>
         <div className="max-w-[400px] md:max-w-[1080px] mx-auto">
-          <div className=" flex justify-center mt-6 flex-wrap gap-4">
+          <div className=" flex justify-center mt-10 flex-wrap gap-4">
             <CardProject />
             <CardProject />
             <CardProject />
@@ -120,7 +121,25 @@ const Skills = () => {
 const Blog = () => {
   return (
     <>
-      <div></div>
+      <div className="md:max-w-[1080px] mx-auto px-10 mt-36">
+        <div className="flex md:justify-center">
+          <div className="flex flex-col md:w-2/3 md:mr-7">
+            <h2 className="text-center">✏️ Latest Blog </h2>
+            <p className=" text-desc text-center">These are some of the projects I have created. These projects have not only helped me build my portfolio, but also enhanced the skills I have developed.</p>
+          </div>
+        </div>
+        <div className="max-w-[400px] md:max-w-[1080px] mx-auto">
+          <div className=" flex justify-center mt-10 flex-wrap gap-4">
+            <CardBlog />
+            <CardBlog />
+            <CardBlog />
+          </div>
+        </div>
+
+        <div className="mt-6 flex justify-center">
+          <Button>View All</Button>
+        </div>
+      </div>
     </>
   );
 };
