@@ -5,12 +5,14 @@ import { Button } from "@/components/button";
 import CardProject from "@/components/cardProjects";
 import CardIcon from "@/components/cardIcon";
 import CardBlog from "@/components/cardBlog";
+import BgStyle from "@/components/bgstyle";
 
 export default function Home() {
   return (
     <>
       <div className="min-h-screen">
         <main>
+          <BgStyle height={'h-[600vh] md:h-[400vh]'}/>
           <Hero />
           <About />
           <Projects />
