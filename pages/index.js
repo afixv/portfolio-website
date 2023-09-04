@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <div id="home" className="min-h-screen">
-        <BgStyle pageID={'home'}/>
+        <BgStyle pageID={"home"} />
         <Hero />
         <About />
         <Projects />
@@ -32,11 +32,11 @@ const Hero = () => {
         </div>
 
         <p className="text-center text-body">Information Engineering Undergraduate Student</p>
-        <h1 className="font-semibold mx-10 text-[28px] md:text-[40px] md:w-[600px] text-center heigh leading-tight mt-6">Explore the future with captivating UI/UX design and front-end abilities.</h1>
+        <h1 className="font-semibold mx-10 text-[28px] md:text-[40px] max-w-[400px] md:max-w-[600px] text-center heigh leading-tight mt-6">Explore the future with captivating UI/UX design and front-end abilities.</h1>
         <Link href="#about">
           <Image className="mt-20 animate-bounce pointer-events-none" alt="arrow" src="/arrowdown.svg" width="18" height="18" />
         </Link>
-        <Image className="absolute ml-[200px] mt-[300px] pointer-events-none" src="/scratch.svg" alt="scratch style" width="200" height="200" />
+        <Image className="absolute w-40 md:w-[200px] ml-[10px] xs:ml-[100px] md:ml-[200px] mt-[300px] xs:mt-[230px] md:mt-[300px] pointer-events-none" src="/scratch.svg" alt="scratch style" width="200" height="200" />
       </div>
     </>
   );
