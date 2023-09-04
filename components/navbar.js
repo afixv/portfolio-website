@@ -107,7 +107,7 @@ export default function Navbar() {
         <div className="  flex items-center">{sosmedList}</div>
       </div>
       <nav className="hidden md:block -mt-10 mx-auto text-c-body-fade sticky top-6 bg-c-black-grey py-2.5 px-6 rounded-full drop-shadow-lg w-[420px] z-10 transition-all duration-300">{navList}</nav>
-      <nav data-navDisapear className="block md:hidden z-10 transition-all duration-[650ms] sticky top-4 ">
+      <nav data-navDisapear className="block md:hidden z-20 transition-all duration-[650ms] sticky top-4 ">
         <div className="flex items-center justify-between mt-4 mx-6 text-c-body-fade  bg-c-black-grey py-2 pl-6 pr-4 rounded-full drop-shadow-md">
           {logo}
           <button onClick={toggleNavList} className={`text-white text-2xl bg-c-secondary p-1.5 rounded-full hover:opacity-80 ${isNavListVisible ? "-rotate-180" : ""} transition-transform transform duration-300 ease-in-out `}>
@@ -116,7 +116,7 @@ export default function Navbar() {
         </div>
         <div
           data-menuMobile
-          className={`${isNavListVisible ? "translate-x-0 visible" : "translate-x-[200px] invisible"} absolute text-sm w-[150px] mr-9 mt-4 rounded-xl right-0 bg-c-black-grey shadow-lg px-8 py-8 transform transition-all duration-200`}
+          className={`${isNavListVisible ? "opacity-100 translate-y-0" : "-translate-y-12 -z-10 opacity-0"}  absolute text-sm w-[150px] mr-9 mt-4 rounded-xl right-0 bg-c-black-grey shadow-lg px-8 py-8 transform transition-all duration-300`}
         >
           {navList}
           <div className="text-c-body-fade hover:text-white mt-5 flex justify-start items-center">{sosmedList}</div>
