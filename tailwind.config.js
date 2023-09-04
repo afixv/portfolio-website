@@ -26,7 +26,7 @@ module.exports = {
         },
       },
       animation: {
-        waving: "waving 2s ease-in-out infinite",
+        waving: "waving 1.5s ease-in-out infinite",
       },
     },
   },
