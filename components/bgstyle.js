@@ -1,11 +1,20 @@
-export default function BgStyle({ height }) {
-  const selectedHeight = [height || 'h-screen']
+import { useEffect, useState } from "react";
+
+export default function BgStyle( {pageID} ) {
+  const [mainContentHeight, setMainContentHeight] = useState("100vh");
+
+  useEffect(() => {
+    const mainContent = document.getElementById(pageID);
+    const height = mainContent ? mainContent.scrollHeight + 300 + "px" : "100vh";
+    setMainContentHeight(height);
+  }, []);
+
   return (
-    <div className=" absolute top-0 left-0 right-0 bottom-0 -z-50">
+    <div className="absolute inset-0 -z-50">
       <div className="mx-auto max-w-[850px]">
         <div className="flex justify-between flex-row">
           {Array.from({ length: 5 }, (_, index) => (
-            <div key={index} className={` w-[.5px] md:w-[1px] bg-c-black-grey ${selectedHeight}`}></div>
+            <div style={{ height: mainContentHeight }} key={index} className="w-[.5px] md:w-[1px] bg-c-black-grey h-screen"></div>
           ))}
         </div>
       </div>

@@ -1,3 +1,12 @@
-export default function Projects () {
-    return <h1>Projects</h1>
+import BgStyle from "@/components/bgstyle";
+
+export default function Projects() {
+  return (
+    <>
+      <div id="project">
+        <BgStyle pageID={"project"} />
+        <h1> Contact Me </h1>
+      </div>
+    </>
+  );
 }

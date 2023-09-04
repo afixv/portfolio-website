@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/button";
@@ -10,15 +9,13 @@ import BgStyle from "@/components/bgstyle";
 export default function Home() {
   return (
     <>
-      <div className="min-h-screen">
-        <main>
-          <BgStyle height={'h-[600vh] md:h-[400vh]'}/>
-          <Hero />
-          <About />
-          <Projects />
-          <Skills />
-          <Blog />
-        </main>
+      <div id="home" className="min-h-screen">
+        <BgStyle pageID={'home'}/>
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Blog />
       </div>
     </>
   );
@@ -80,7 +77,9 @@ const Projects = () => {
         </div>
 
         <div className="mt-6 flex justify-center">
-          <Button>View All</Button>
+          <Link href={"/projects"}>
+            <Button>View All</Button>
+          </Link>
         </div>
       </div>
     </>
@@ -139,7 +138,9 @@ const Blog = () => {
         </div>
 
         <div className="mt-6 flex justify-center">
-          <Button>View All</Button>
+          <Link href={"/blog"}>
+            <Button>View All</Button>
+          </Link>
         </div>
       </div>
     </>

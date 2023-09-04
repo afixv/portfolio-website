@@ -25,7 +25,6 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" href="/afixicon.svg" />
       </Head>
       <main className={worksans.className}>
-        <BgStyle />
         <Navbar />
         <BackTop />
         <Component {...pageProps} />

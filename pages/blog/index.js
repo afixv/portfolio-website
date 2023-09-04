@@ -1,3 +1,12 @@
+import BgStyle from "@/components/bgstyle";
+
 export default function Blog() {
-    return <h1>Welcome to My Blog</h1>
+  return (
+    <>
+      <div id="blog">
+        <BgStyle pageID={"blog"} />
+        <h1> Welcome to my Blog! </h1>
+      </div>
+    </>
+  );
 }
