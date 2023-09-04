@@ -25,7 +25,7 @@ export default function CardIcon({ color, icon }) {
   return (
     <>
       <div className={` ${selectedColor} bgCard backdrop-blur-sm rounded-xl py-3 px-3 sm:py-4 sm:px-4 sm:text-5xl hover:-translate-y-1.5  hover:opacity-80 transition-all`}>
-        <div className="">
+        <div className="pointer-events-none">
           <Image src={selectedIcon} alt="icon" width={48} height={48}/>
         </div>
       </div>
