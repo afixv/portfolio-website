@@ -17,6 +17,8 @@
 body {
   color: white;
   background: var(--c-primary);
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 h2 {
