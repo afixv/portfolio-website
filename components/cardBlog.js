@@ -6,11 +6,11 @@ import {AiOutlineComment} from "react-icons/ai"
 export default function CardBlog({ className }) {
   return (
     <>
-      <div className={`${className} backdrop-blur-sm rounded-xl w-full min-h-[16rem] md:w-[30%] bgCard hover:-translate-y-1.5  hover:opacity-80 transition-all`}>
-        <div className="relative h-3/5">
-          <Image className="rounded-t-xl" src={"/blog.png"} alt="Project 180dc UGM Website" fill style={{ objectFit: "cover" }} />
+      <div className={`${className} backdrop-blur-sm rounded-xl w-full md:w-[30%] bgCard hover:-translate-y-1.5  hover:opacity-80 transition-all`}>
+        <div className=" flex ">
+          <Image className="w-full h-[150px] object-cover rounded-t-xl" src={"/blog.png"} alt="Project 180dc UGM Website" width={500} height={500}/>
         </div>
-        <Link href="/" className="relative flex flex-col px-4 pt-4 pb-4">
+        <Link href="/" className=" flex flex-col px-4 pt-4 pb-4">
           <div className="flex">
             <p className="text-base leading-tight font-semibold">Understanding Next.js Data Fetching (CSR, SSR, SSG, ISR)</p>
             <div className="icon"></div>

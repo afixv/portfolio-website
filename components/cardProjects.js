@@ -4,12 +4,11 @@ import Link from "next/link";
 export default function CardProject({ className }) {
   return (
     <>
-      <div className={`${className} backdrop-blur-sm rounded-xl w-full min-h-[16rem] md:w-[30%] bgCard hover:-translate-y-1.5  hover:opacity-80 transition-all h-max-content`}>
-        <div></div>
-        <div className="relative h-3/5">
-          <Image className="rounded-t-xl" src={"/180dc.png"} alt="Project 180dc UGM Website" fill style={{ objectFit: "cover" }} />
+      <div className={`${className} backdrop-blur-sm flex flex-col rounded-xl w-full  md:w-[30%] bgCard hover:-translate-y-1.5  hover:opacity-80 transition-all`}>
+        <div className="flex ">
+          <Image className="rounded-t-xl  w-full h-[160px] object-cover" src={"/180dc.png"} width="500" height={"500"} alt="Project 180dc UGM Website" />
         </div>
-        <Link href="/" className="relative flex flex-col px-4 pt-2 pb-4">
+        <Link href="/" className=" flex flex-col px-4 pt-2 pb-4">
           <div className="flex">
             <p className="text-base font-semibold">Project 818</p>
             <div className="icon"></div>
