@@ -29,7 +29,7 @@ export default function Navbar() {
     };
     const handleScroll = () => {
       const navbar = document.querySelector("nav");
-      const navbarMobile = document.querySelector("[data-navDisapear]");
+      const navbarMobile = document.querySelector("[data-navdisapear]");
       if (isScrollingDown() || window.pageYOffset < 50) {
         navbar.classList.add("top-6", "visible");
         navbar.classList.remove("-top-20", "invisible");
@@ -107,7 +107,7 @@ export default function Navbar() {
         <div className="  flex items-center">{sosmedList}</div>
       </div>
       <nav className="hidden md:block -mt-10 mx-auto text-c-body-fade sticky top-6 bg-c-black-grey py-2.5 px-6 rounded-full drop-shadow-lg w-[420px] z-10 transition-all duration-300">{navList}</nav>
-      <nav data-navDisapear className="block md:hidden z-20 transition-all duration-[650ms] sticky top-4 ">
+      <nav data-navdisapear className="block md:hidden z-20 transition-all duration-[650ms] sticky top-4 ">
         <div className="flex items-center justify-between mt-4 mx-6 text-c-body-fade  bg-c-black-grey py-2 pl-6 pr-4 rounded-full drop-shadow-md">
           {logo}
           <button onClick={toggleNavList} className={`text-white text-2xl bg-c-secondary p-1.5 rounded-full hover:opacity-80 ${isNavListVisible ? "-rotate-180" : ""} transition-transform transform duration-300 ease-in-out `}>
