@@ -56,7 +56,16 @@ h2 {
 }
 
 .bgFooter {
-  background: linear-gradient(180deg, rgba(26, 26, 26, 0.00) 0%, #1A1A1A 24.79%);
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0) 0%, #1a1a1a 24.79%);
+}
+
+.bgForm {
+  background-color: rgba(89, 94, 112, 0.3);
+}
+
+input {
+  color-scheme: dark;
+  font-size: 16px;
 }
 
 /* Scroll Bar */
