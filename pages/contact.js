@@ -7,7 +7,7 @@ export default function Contactme() {
   return (
     <>
       <BgStyle />
-      <div className="flex items-center mt-4 md:mt-8 gap-10 justify-center py-10 px-6 md:px-10 flex-col md:flex-row max-h-screen max-w-[1080px] mx-auto">
+      <div className="flex items-center mt-0 md:mt-8 gap-10 justify-center py-10 px-6 md:px-10 flex-col md:flex-row max-h-screen max-w-[1080px] mx-auto">
         <div className="flex flex-start flex-col ">
           <h3 className="text-[18px] items-center md:text-2xl">Dont Be Shy - Say Hi!</h3>
           <h2 className="text-[28px] leading-[1.1] mt-1 md:text-4xl">Get in Touch with Me!</h2>
