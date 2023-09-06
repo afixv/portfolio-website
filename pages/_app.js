@@ -28,7 +28,7 @@ export default function App({ Component, pageProps }) {
         <Navbar />
         <BackTop />
         <Component {...pageProps} />
-        <Footer />
+        {router.route !== "/contact" && <Footer />}
       </main>
     </>
   );
