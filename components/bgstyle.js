@@ -14,7 +14,7 @@ export default function BgStyle( {pageID} ) {
       <div className="mx-auto max-w-[850px]">
         <div className="flex justify-between flex-row">
           {Array.from({ length: 5 }, (_, index) => (
-            <div style={{ height: mainContentHeight }} key={index} className="w-[.5px] md:w-[1px] bg-c-black-grey h-screen"></div>
+            <div style={{ height: mainContentHeight }} key={index} className="w-[.5px] md:w-[1px] bg-c-black-grey"></div>
           ))}
         </div>
       </div>
