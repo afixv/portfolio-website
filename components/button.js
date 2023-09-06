@@ -10,9 +10,11 @@ export const Button = ({ children, size, onClick, className }) => {
   const imageHeight = size === "lg" ? 30 : 25;
 
   return (
-    <button type="submit" className={` ${className} ${sizeClassName} hover:opacity-80 flex items-center gap-4 rounded-full bg-c-button text-c-black-grey  transition-all font-semibold `} onClick={onClick}>
+    <button type="submit" className={` ${className} ${sizeClassName} group/button hover:opacity-80 flex items-center gap-3 rounded-full bg-c-button text-c-black-grey  transition-all font-semibold `} onClick={onClick}>
       {children}
-      <Image className="flex text-c-black-grey" src="arrowbutton.svg" alt="arrow" width={imageWidth} height={imageHeight} />
+      <div className="h-full w-full group-hover/button:translate-x-1 transition-all">
+        <Image className=" flex text-c-black-grey" src="arrowbutton.svg" alt="arrow" width={imageWidth} height={imageHeight} />
+      </div>
     </button>
   );
 };
