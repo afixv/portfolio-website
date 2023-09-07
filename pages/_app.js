@@ -1,11 +1,11 @@
 import "@/styles/globals.css";
-import BgStyle from "@/components/bgstyle";
 import Navbar from "@/components/navbar";
 import BackTop from "@/components/backTop";
 import { Work_Sans } from "next/font/google";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Footer from "@/components/footer";
+import NextNProgress from "nextjs-progressbar";
 
 const worksans = Work_Sans({
   subsets: ["latin"],
@@ -25,6 +25,7 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" href="/afixicon.svg" />
       </Head>
       <main className={worksans.className}>
+        <NextNProgress color="var(--c-secondary)"/>
         <Navbar />
         <BackTop />
         <Component {...pageProps} />
