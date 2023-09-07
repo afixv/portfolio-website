@@ -2,6 +2,8 @@ import BgStyle from "@/components/bgstyle";
 import Link from "next/link";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { Button } from "@/components/button";
+import InputField from "@/components/Form/inputField";
+import TextArea from "@/components/Form/textArea";
 
 export default function Contactme() {
   return (
@@ -37,53 +39,27 @@ export default function Contactme() {
         </div>
         <div className="flex w-full md:w-2/3 text-sm md:text-base ">
           <form action="/action_page.php" className="w-full flex flex-col gap-4">
-            <div>
-              <label htmlFor="name" class="block mb-1 ml-2 text-white">
-                Full Name
-              </label>
-              <input
-                required
-                className="text-white text-sm md:text-base  w-full backdrop-blur-sm transition-all placeholder-[#6E6E6E]
-              outline-none focus:ring-1 focus:ring-c-secondary
-            invalid:border-red-500 invalid:text-red-600
-            focus:invalid:border-red-500 focus:invalid:ring-red-500
-              rounded-full px-4 py-3 bgForm"
-                placeholder="Enter your full name..."
-                type="text"
-                name="name"
+            <InputField
+              name="name"
+              label="Full Name"
+              required={true}
+              type="text"
+              placeholder="Enter your full name..."
               />
-            </div>
-            <div>
-              <label htmlFor="email" class="block mb-1 ml-2 text-white">
-                Email
-              </label>
-              <input
-                required
-                className="text-white text-sm md:text-base  w-full backdrop-blur-sm transition-all placeholder-[#6E6E6E]
-              outline-none focus:ring-1 focus:ring-c-secondary
-            invalid:border-red-500 invalid:text-red-600
-            focus:invalid:border-red-500 focus:invalid:ring-red-500
-              rounded-full px-4 py-3 bgForm"
-                placeholder="Enter your email..."
-                type="email"
-                name="email"
+            <InputField
+              name="email"
+              label="Email"
+              required={true}
+              type="email"
+              placeholder="Enter your email..."
               />
-            </div>
-            <div>
-              <label htmlFor="message" class="block mb-1 ml-2 text-white">
-                Message
-              </label>
-              <textarea
-                required
-                placeholder="Enter your message..."
-                id="message"
-                className="block text-white w-full backdrop-blur-sm transition-all placeholder-[#6E6E6E]
-              outline-none focus:ring-1 focus:ring-c-secondary
-            invalid:border-red-500 invalid:text-red-600
-            focus:invalid:border-red-500 focus:invalid:ring-red-500
-              rounded-2xl min-h-[200px] -z-20 px-4 py-3 bgForm"
-              />
-            </div>
+            <TextArea
+              id="message"
+              label="Message"
+              placeholder="Enter your message..."
+              required={true}
+
+            />
             <div className="mt-2">
               <Button size="lg">Submit</Button>
             </div>
