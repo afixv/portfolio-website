@@ -1,7 +1,7 @@
-export default function InputField({ label, name, placeholder, required, type }) {
+export default function InputField({ label, id, placeholder, required, type }) {
   return (
     <div>
-      <label htmlFor={name} className="block mb-1 ml-2 text-white">
+      <label htmlFor={id} className="block mb-1 ml-2 text-white">
         {label}
       </label>
       <input
@@ -13,7 +13,8 @@ export default function InputField({ label, name, placeholder, required, type })
           rounded-full px-4 py-3 bgForm"
         placeholder={placeholder}
         type={type}
-        name={name}
+        name={id}
+        id={id}
       />
     </div>
   );

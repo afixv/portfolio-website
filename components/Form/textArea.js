@@ -8,6 +8,7 @@ export default function TextArea({ label, id, placeholder, required }) {
           required={required}
           placeholder={placeholder}
           id={id}
+          name={id}
           className="block text-white w-full backdrop-blur-sm transition-all placeholder-[#6E6E6E]
           outline-none focus:ring-1 focus:ring-c-secondary
           invalid:border-red-500 invalid:text-red-600
