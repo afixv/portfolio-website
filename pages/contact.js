@@ -4,8 +4,41 @@ import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { Button } from "@/components/button";
 import InputField from "@/components/Form/inputField";
 import TextArea from "@/components/Form/textArea";
+import { useState } from "react";
+import toast from "react-hot-toast";
 
-export default function Contactme() {
+export default function ContactMe() {
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    toast.loading('Submitting...', {
+      style: {
+        borderRadius: '50px',
+      },
+      
+    });
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", process.env.NEXT_PUBLIC_MY_FORM_KEY);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    }).then((res) => res.json());
+
+    if (res.success) {
+      console.log("Success", res);
+      toast.dismiss();
+      toast.success("Form submitted successfully" , {
+        style: {
+          borderRadius: '50px',
+        },
+      });
+      event.target.reset();
+    } else {
+      toast.error("Error submitting form");
+    }
+  };
   return (
     <>
       <BgStyle />
@@ -38,30 +71,14 @@ export default function Contactme() {
           </ul>
         </div>
         <div className="flex w-full md:w-2/3 text-sm md:text-base ">
-          <form action="/action_page.php" className="w-full flex flex-col gap-4">
-            <InputField
-              name="name"
-              label="Full Name"
-              required={true}
-              type="text"
-              placeholder="Enter your full name..."
-              />
-            <InputField
-              name="email"
-              label="Email"
-              required={true}
-              type="email"
-              placeholder="Enter your email..."
-              />
-            <TextArea
-              id="message"
-              label="Message"
-              placeholder="Enter your message..."
-              required={true}
-
-            />
+          <form onSubmit={handleSubmit} className="w-full flex flex-col gap-4">
+            <InputField id="name" label="Full Name" required={true} type="text" placeholder="Enter your full name..." />
+            <InputField id="email" label="Email" required={true} type="email" placeholder="Enter your email..." />
+            <TextArea id="message" label="Message" placeholder="Enter your message..." required={true} />
             <div className="mt-2">
-              <Button size="lg">Submit</Button>
+              <Button size="lg">
+                Submit
+              </Button>
             </div>
           </form>
         </div>
