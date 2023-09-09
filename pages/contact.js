@@ -37,6 +37,7 @@ export default function ContactMe() {
       event.target.reset();
     } else {
       toast.error("Error submitting form");
+      toast.dismiss();
     }
   };
   return (
