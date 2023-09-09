@@ -6,6 +6,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Footer from "@/components/footer";
 import NextNProgress from "nextjs-progressbar";
+import { Toaster } from 'react-hot-toast';
 
 const worksans = Work_Sans({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       <main className={worksans.className}>
         <NextNProgress color="var(--c-secondary)"/>
+        <Toaster />
         <Navbar />
         <BackTop />
         <Component {...pageProps} />
