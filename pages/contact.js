@@ -8,14 +8,12 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 
 export default function ContactMe() {
-
   const handleSubmit = async (event) => {
     event.preventDefault();
-    toast.loading('Submitting...', {
+    toast.loading("Submitting...", {
       style: {
-        borderRadius: '50px',
+        borderRadius: "50px",
       },
-      
     });
     const formData = new FormData(event.target);
 
@@ -29,15 +27,15 @@ export default function ContactMe() {
     if (res.success) {
       console.log("Success", res);
       toast.dismiss();
-      toast.success("Form submitted successfully" , {
+      toast.success("Form submitted successfully", {
         style: {
-          borderRadius: '50px',
+          borderRadius: "50px",
         },
       });
       event.target.reset();
     } else {
-      toast.error("Error submitting form");
       toast.dismiss();
+      toast.error("Error submitting form");
     }
   };
   return (
@@ -77,9 +75,7 @@ export default function ContactMe() {
             <InputField id="email" label="Email" required={true} type="email" placeholder="Enter your email..." />
             <TextArea id="message" label="Message" placeholder="Enter your message..." required={true} />
             <div className="mt-2">
-              <Button size="lg">
-                Submit
-              </Button>
+              <Button size="lg">Submit</Button>
             </div>
           </form>
         </div>
