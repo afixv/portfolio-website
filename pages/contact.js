@@ -42,7 +42,7 @@ export default function ContactMe() {
     <>
       <BgStyle />
       <div className="flex items-center mt-0 md:mt-8 gap-10 justify-center py-10 px-6 md:px-10 flex-col md:flex-row max-h-screen max-w-[1080px] mx-auto">
-        <div className="flex flex-start flex-col ">
+        <div data-aos="fade-right" className="flex flex-start flex-col ">
           <h3 className="text-[18px] items-center md:text-2xl">Dont Be Shy - Say Hi!</h3>
           <h2 className="text-[28px] leading-[1.1] mt-1 md:text-4xl">Get in Touch with Me!</h2>
           <p className="text-c-body text-xs md:text-base  font-normal mt-2">lets rocket towards success and turn your ideas into something extraordinary! 🚀 🌟</p>
@@ -69,7 +69,7 @@ export default function ContactMe() {
             </li>
           </ul>
         </div>
-        <div className="flex w-full md:w-2/3 text-sm md:text-base ">
+        <div data-aos="fade-left" className="flex w-full md:w-2/3 text-sm md:text-base ">
           <form onSubmit={handleSubmit} className="w-full flex flex-col gap-4">
             <InputField id="name" label="Full Name" required={true} type="text" placeholder="Enter your full name..." />
             <InputField id="email" label="Email" required={true} type="email" placeholder="Enter your email..." />

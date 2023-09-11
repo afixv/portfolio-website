@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <>
-      <footer className="mt-20 md:max-w-[1080px] mx-auto pt-32 px-10 pb-16 relative bottom-0 w-full bgFooter">
+      <footer data-aos='fade' className="mt-20 md:max-w-[1080px] mx-auto pt-32 px-10 pb-16 relative bottom-0 w-full bgFooter">
         <Image className="absolute right-2 bottom-16" alt="Icon Outlined" src={"/afixiconoutlined.png"} width={280} height={280}></Image>
         <div className="flex md:justify-start">
           <div className="flex flex-col  md:ml-7">

@@ -24,7 +24,7 @@ export default function Home() {
 const Hero = () => {
   return (
     <>
-      <div className="-mt-8 mx-5 flex min-h-screen justify-center items-center flex-col">
+      <div data-aos="fade-up" className="-mt-8 mx-5 flex min-h-screen justify-center items-center flex-col">
         <Image className="rounded-full" alt="Afix's Profile Picture" src="/mypicture.png" width="150" height="150" />
         <div className="flex items-center mx-auto">
           <h2 className=" text-center font-semibold mt-3 text-4xl">Hi, I am Afix</h2>
@@ -45,7 +45,7 @@ const Hero = () => {
 const About = () => {
   return (
     <>
-      <div id="about" className="flex justify-center pt-20">
+      <div data-aos="fade-left" id="about" className="flex justify-center pt-20">
         <div className="max-w-[800px] self-center flex flex-col mx-10 text-center">
           <h2 className="font-semibold">Hello, it’s me! 😉</h2>
           <p className="text-body text-justify md:text-center">
@@ -63,12 +63,12 @@ const Projects = () => {
     <>
       <div className="md:max-w-[1080px] mx-auto px-10 mt-20">
         <div className="flex md:justify-end">
-          <div className="flex flex-col md:w-2/3 md:mr-7">
+          <div data-aos="fade-left" className="flex flex-col md:w-2/3 md:mr-7">
             <h2 className="text-center md:text-right">🚀 Highlight Project </h2>
             <p className=" text-desc text-center md:text-right">These are some of the projects I have created. These projects have not only helped me build my portfolio, but also enhanced the skills I have developed.</p>
           </div>
         </div>
-        <div className="max-w-[400px] md:max-w-[1080px] mx-auto">
+        <div data-aos="fade-right" className="max-w-[400px] md:max-w-[1080px] mx-auto">
           <div className=" flex justify-center mt-10 flex-wrap gap-4">
             <CardProject />
             <CardProject />
@@ -76,7 +76,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="mt-6 flex justify-center">
+        <div data-aos="fade-up" className="mt-6 flex justify-center">
           <Link href={"/projects"}>
             <Button>View All</Button>
           </Link>
@@ -101,13 +101,13 @@ const Skills = () => {
   ];
   return (
     <>
-      <div className="-z-10  bgSection md:rounded-r-[50px] h-[32rem] md:h-[30rem] absolute mt-20 w-full md:w-[80%]"></div>
-      <div className="flex-col px-10 max-w-[1080px] mx-auto mt-32">
+      <div data-aos="fade-right" className="-z-10  bgSection md:rounded-r-[50px] h-[32rem] md:h-[30rem] absolute mt-20 w-full md:w-[80%]"></div>
+      <div data-aos="fade-right" className="flex-col px-10 max-w-[1080px] mx-auto mt-32">
         <div className="flex flex-col md:ml-7">
           <h2>Specialized Skills 👨‍💻 </h2>
           <p className="text-desc sm:w-2/3">These are some of the projects I have created. These projects have not only helped me build my portfolio, but also enhanced the skills I have developed.</p>
         </div>
-        <div className="mt-10 max-w-[400px] md:max-w-[700px] mx-auto">
+        <div data-aos="zoom-in" data-aos-delay="200" className="mt-10 max-w-[400px] md:max-w-[700px] mx-auto">
           <div className=" flex justify-center mt-6 flex-wrap gap-4 md:gap-12">
             {iconData.map((data) => (
               <CardIcon key={data.id} color={data.color} icon={data.icon} />
@@ -123,21 +123,21 @@ const Blog = () => {
   return (
     <>
       <div className="md:max-w-[1080px] mx-auto px-10 mt-36">
-        <div className="flex md:justify-center">
+        <div data-aos="fade-down" className="flex md:justify-center">
           <div className="flex flex-col md:w-2/3 md:mr-7">
             <h2 className="text-center">✏️ Latest Blog </h2>
             <p className=" text-desc text-center">These are some of the projects I have created. These projects have not only helped me build my portfolio, but also enhanced the skills I have developed.</p>
           </div>
         </div>
-        <div className="max-w-[400px] md:max-w-[1080px] mx-auto">
-          <div className=" flex justify-center mt-10 flex-wrap gap-4">
+        <div data-aos="fade-right" data-aos-delay="200" className="max-w-[400px] md:max-w-[1080px] mx-auto">
+          <div  className=" flex justify-center mt-10 flex-wrap gap-4">
             <CardBlog />
             <CardBlog />
             <CardBlog />
           </div>
         </div>
 
-        <div className="mt-6 flex justify-center">
+        <div data-aos="fade-up" className="mt-6 flex justify-center">
           <Link href={"/blog"}>
             <Button>View All</Button>
           </Link>
