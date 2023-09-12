@@ -11,7 +11,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import NextNProgress from "nextjs-progressbar";
 
-import { Toaster } from 'react-hot-toast';
+import { Toaster } from "react-hot-toast";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -30,10 +30,9 @@ export default function App({ Component, pageProps }) {
     Aos.init({
       once: true,
       duration: 500,
-      easing: 'ease-out-quad'
+      easing: "ease-out-quad",
     });
     Aos.refresh();
-    
   }, []);
   return (
     <>
@@ -43,11 +42,13 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" href="/afixicon.svg" />
       </Head>
       <main className={worksans.className}>
-        <NextNProgress color="var(--c-secondary)"/>
-        <Toaster />
         <Navbar />
+        <Toaster />
         <BackTop />
-        <Component {...pageProps} />
+        <NextNProgress color="var(--c-secondary)" />
+        <div className="overflow-x-hidden overflow-y-clip h-full w-full">
+          <Component {...pageProps} />
+        </div>
         {router.route !== "/contact" && <Footer />}
       </main>
     </>
