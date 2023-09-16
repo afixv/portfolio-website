@@ -42,14 +42,14 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" href="/afixicon.svg" />
       </Head>
       <main className={worksans.className}>
-        <Navbar />
+      {(router.route !== "/projects" && router.route !== "/blog") && <Navbar />}
         <Toaster />
         <BackTop />
         <NextNProgress color="var(--c-secondary)" />
         <div className="overflow-x-hidden overflow-y-clip h-full w-full">
           <Component {...pageProps} />
         </div>
-        {router.route !== "/contact" && <Footer />}
+        {(router.route !== "/contact" && router.route !== "/projects" && router.route !== "/blog") && <Footer />}
       </main>
     </>
   );

@@ -45,7 +45,7 @@ const Hero = () => {
 const About = () => {
   return (
     <>
-      <div data-aos="fade-left" id="about" className="flex justify-center pt-20">
+      <div data-aos="fade-down" id="about" className="flex justify-center pt-20">
         <div className="max-w-[800px] self-center flex flex-col mx-10 text-center">
           <h2 className="font-semibold">Hello, it’s me! 😉</h2>
           <p className="text-body text-justify md:text-center">

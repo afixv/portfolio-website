@@ -1,12 +1,10 @@
 import BgStyle from "@/components/bgstyle";
+import ComingSoon from "@/components/comingSoon";
 
 export default function Projects() {
   return (
     <>
-      <div id="project">
-        <BgStyle pageID={"project"} />
-        <h1> Contact Me </h1>
-      </div>
+      <ComingSoon />
     </>
   );
 }

@@ -1,12 +1,10 @@
 import BgStyle from "@/components/bgstyle";
+import ComingSoon from "@/components/comingSoon";
 
 export default function Blog() {
   return (
     <>
-      <div id="blog">
-        <BgStyle pageID={"blog"} />
-        <h1> Welcome to my Blog! </h1>
-      </div>
+    <ComingSoon/>
     </>
   );
 }
