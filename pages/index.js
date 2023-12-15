@@ -129,7 +129,7 @@ const Projects = () => {
               title="My Old Portfolio Website"
               role="Frontend Developer"
               desc="Portfolio website saya yang lama menggunakan HTML, CSS, dan Javascript Vanilla."
-              link="https://www.180dcugm.org/"
+              link="https://afixv.github.io/"
             />
           </div>
         </div>
