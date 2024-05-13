@@ -118,11 +118,11 @@ const Projects = () => {
               link="https://paw-kelompok-11-client.vercel.app/"
             />
             <CardProject
-              image="/180dc.png"
-              title="180DC UGM"
-              role="UI/UX Designer & Front End Developer"
-              desc="180 Degrees Consulting UGM is the branch of the worlds largest student-led consultancy for non-profits & social enterprises."
-              link="https://www.180dcugm.org/"
+              image="/damar.png"
+              title="DAMAR"
+              role="Fullstack Developer & UI/UX Designer"
+              desc="Aplikasi pelaporan jalan rusak, terdapat mobile app menggunakan React Native dan website sebagai dashboard."
+              link="https://github.com/Damar-C05/damar-mobile-app"
             />
             <CardProject
               image="/old-portfolio.png"
