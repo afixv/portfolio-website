@@ -93,6 +93,32 @@ const About = () => {
 };
 
 const Projects = () => {
+  const portfolioDatas = [
+    {
+      image: "/portfolio/Rentalin.jpg",
+      title: "Rentalin",
+      role: "Full Stack Developer",
+      desc: "Website untuk tugas mata kuliah Pemrograman Web yang dibuat menggunakan ExpressJS dan NextJS",
+      link: "https://paw-kelompok-11-client.vercel.app/",
+      skills: ["NextJs", "Tailwind", "MongoDB"],
+    },
+    {
+      image: "/portfolio/Damar.jpg",
+      title: "DAMAR",
+      role: "Fullstack Developer & UI/UX Designer",
+      desc: "Aplikasi pelaporan jalan rusak, terdapat mobile app menggunakan React Native dan website sebagai dashboard.",
+      link: "https://github.com/Damar-C05/damar-mobile-app",
+      skills: ["ReactNative", "Laravel", "Python"],
+    },
+    {
+      image: "/portfolio/Findit2022.jpg",
+      title: "FindIT! UGM 2022 Website",
+      role: "Frontend Developer & UI/UX Designer",
+      desc: "Website FindIT! UGM 2022 saya bertugas membuat landing page serta user interfacenya.",
+      link: "https://github.com/jovianjr/frontend-findit22",
+      skills: ["React", "Tailwind", "Figma"],
+    },
+  ];
   return (
     <>
       <div className="md:max-w-[1080px] mx-auto px-10 mt-20">
@@ -110,27 +136,17 @@ const Projects = () => {
           data-aos="fade-right"
           className="max-w-[400px] md:max-w-[1080px] mx-auto">
           <div className=" flex justify-center mt-10 flex-wrap gap-4">
-            <CardProject
-              image="/rentalin.png"
-              title="Rentalin"
-              role="Full Stack Developer"
-              desc="Website untuk tugas mata kuliah Pemrograman Web yang dibuat menggunakan ExpressJS dan NextJS"
-              link="https://paw-kelompok-11-client.vercel.app/"
-            />
-            <CardProject
-              image="/damar.png"
-              title="DAMAR"
-              role="Fullstack Developer & UI/UX Designer"
-              desc="Aplikasi pelaporan jalan rusak, terdapat mobile app menggunakan React Native dan website sebagai dashboard."
-              link="https://github.com/Damar-C05/damar-mobile-app"
-            />
-            <CardProject
-              image="/old-portfolio.png"
-              title="My Old Portfolio Website"
-              role="Frontend Developer"
-              desc="Portfolio website saya yang lama menggunakan HTML, CSS, dan Javascript Vanilla."
-              link="https://afixv.github.io/"
-            />
+            {portfolioDatas.map((data, index) => (
+              <CardProject
+                key={index}
+                image={data.image}
+                title={data.title}
+                role={data.role}
+                desc={data.desc}
+                link={data.link}
+                skills={data.skills}
+              />
+            ))}
           </div>
         </div>
 
@@ -146,13 +162,13 @@ const Projects = () => {
 
 const Skills = () => {
   const iconData = [
-    { id: 1, icon: "Figma", color: "text-white" },
-    { id: 2, icon: "Photoshop", color: "text-white" },
-    { id: 3, icon: "AI", color: "text-white" },
-    { id: 4, icon: "Js", color: "text-white" },
-    { id: 5, icon: "Cpp", color: "text-white" },
-    { id: 6, icon: "ReactBrand", color: "text-white" },
-    { id: 7, icon: "NextJs", color: "text-white" },
+    { id: 1, icon: "Laravel", color: "text-white" },
+    { id: 2, icon: "ReactBrand", color: "text-white" },
+    { id: 3, icon: "NextJs", color: "text-white" },
+    { id: 4, icon: "Figma", color: "text-white" },
+    { id: 5, icon: "Js", color: "text-white" },
+    { id: 6, icon: "Python", color: "text-white" },
+    { id: 7, icon: "Cpp", color: "text-white" },
     { id: 8, icon: "Tailwind", color: "text-white" },
     { id: 9, icon: "Antd", color: "text-white" },
     { id: 10, icon: "Pg", color: "text-white" },
@@ -168,9 +184,8 @@ const Skills = () => {
         <div className="flex flex-col md:ml-7">
           <h2>Specialized Skills 👨‍💻 </h2>
           <p className="text-desc sm:w-2/3">
-            These are some of the projects I have created. These projects have
-            not only helped me build my portfolio, but also enhanced the skills
-            I have developed.
+            These skills have been honed through various experiences, helping me
+            excel in my field and continuously improve my capabilities.
           </p>
         </div>
         <div
