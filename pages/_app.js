@@ -24,7 +24,10 @@ const worksans = Work_Sans({
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
-  const routerName = router.route !== "/" ? router.route.charAt(1).toUpperCase() + router.route.slice(2) : "Home";
+  const routerName =
+    router.route !== "/"
+      ? router.route.charAt(1).toUpperCase() + router.route.slice(2)
+      : "Home";
   const pageTitle = `Afix Vega - ${routerName}`;
   useEffect(() => {
     Aos.init({
@@ -38,18 +41,22 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <title key="pagetitle">{pageTitle}</title>
-        <meta name="description" content="Afix Vega - Welcome to My Portfolio" key="metadescription" />
+        <meta
+          name="description"
+          content="Afix Vega - Welcome to My Portfolio"
+          key="metadescription"
+        />
         <link rel="icon" href="/afixicon.svg" />
       </Head>
       <main className={worksans.className}>
-      {(router.route !== "/projects" && router.route !== "/blog") && <Navbar />}
+        {router.route !== "/blog" && <Navbar />}
         <Toaster />
         <BackTop />
         <NextNProgress color="var(--c-secondary)" />
         <div className="overflow-x-hidden overflow-y-clip h-full w-full">
           <Component {...pageProps} />
         </div>
-        {(router.route !== "/contact" && router.route !== "/projects" && router.route !== "/blog") && <Footer />}
+        {router.route !== "/contact" && router.route !== "/blog" && <Footer />}
       </main>
     </>
   );
