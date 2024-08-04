@@ -20,6 +20,10 @@ export default function Home() {
           name="keywords"
           content="Afix Vega Praditya, portfolio, UI/UX design, front-end development, information technology"
         />
+        <meta
+          name="google-site-verification"
+          content="lYECmY8HnKmVlXjR1djKRUzwUSaMvmXk1RBIS585xlg"
+        />
       </Head>
       <div id="home" className="min-h-screen">
         <BgStyle pageID={"home"} />
