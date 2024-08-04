@@ -46,6 +46,10 @@ export default function App({ Component, pageProps }) {
           content="Afix Vega - Welcome to My Portfolio"
           key="metadescription"
         />
+        <meta
+          name="keywords"
+          content="Afix Vega Praditya, portfolio, information technology, developer, projects"
+        />
         <link rel="icon" href="/afixicon.svg" />
       </Head>
       <main className={worksans.className}>
