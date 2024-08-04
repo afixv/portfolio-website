@@ -5,10 +5,22 @@ import CardProject from "@/components/cardProjects";
 import CardIcon from "@/components/cardIcon";
 import CardBlog from "@/components/cardBlog";
 import BgStyle from "@/components/bgstyle";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Afix Vega Praditya - Portfolio</title>
+        <meta
+          name="description"
+          content="Afix Vega Praditya - Information Engineering Undergraduate Student. Explore the future with captivating UI/UX design and front-end abilities."
+        />
+        <meta
+          name="keywords"
+          content="Afix Vega Praditya, portfolio, UI/UX design, front-end development, information technology"
+        />
+      </Head>
       <div id="home" className="min-h-screen">
         <BgStyle pageID={"home"} />
         <Hero />
