@@ -1,5 +1,6 @@
 import BgStyle from "@/components/bgstyle";
 import CardProject from "@/components/cardProjects";
+import Head from "next/head";
 
 export default function Projects() {
   const portfolioDatas = [
@@ -69,20 +70,34 @@ export default function Projects() {
     },
   ];
   return (
-    <div id="projects" className="min-h-screen">
-      <BgStyle pageID={"projects"} />
-      <div className="flex items-center mt-0 md:mt-8 gap-4 justify-center py-10 px-6 md:px-10 flex-col min-h-screen max-w-[1080px] mx-auto">
-        <div
-          data-aos="fade-down"
-          className="flex-col justify-center items-center max-w-lg">
-          <h2 className="text-center">🚀 Highlight Project </h2>
-          <p className=" text-desc text-center mt-2">
-            These are some of the projects I have created. These projects have
-            not only helped me build my portfolio, but also enhanced the skills
-            I have developed.
-          </p>
-        </div>
-        {/* <div className="flex flex-row gap-2">
+    <>
+      <Head>
+        <title>Afix Vega - Projects</title>
+        <meta
+          name="description"
+          content="Explore the portfolio projects of Afix Vega Praditya, including web development, mobile apps, and UI/UX design projects. View projects like Rentalin, DAMAR, 180DC UGM, FindIT! UGM, and more."
+        />
+        <meta
+          name="keywords"
+          content="Afix Vega Praditya, Portfolio, Web Development, UI/UX Design, Mobile Apps, Next.js, React, Tailwind CSS, Figma"
+        />
+      </Head>
+      <div id="projects" className="min-h-screen">
+        <BgStyle pageID={"projects"} />
+        <div className="flex items-center mt-0 md:mt-8 gap-4 justify-center py-10 px-6 md:px-10 flex-col min-h-screen max-w-[1080px] mx-auto">
+          <div
+            data-aos="fade-down"
+            className="flex-col justify-center items-center max-w-lg">
+            <h1 className="text-2xl md:text-4xl font-semibold text-center">
+              🚀 Highlight Project{" "}
+            </h1>
+            <p className=" text-desc text-center mt-4">
+              These are some of the projects I have created. These projects have
+              not only helped me build my portfolio, but also enhanced the
+              skills I have developed.
+            </p>
+          </div>
+          {/* <div className="flex flex-row gap-2">
           <button className="py-2 px-4 rounded-xl active:bg-c-secondary active:text-white bg-c-button text-c-primary font-medium text-sm">
             All
           </button>
@@ -96,24 +111,26 @@ export default function Projects() {
             UI Design
           </button>
         </div> */}
-        <div
-          data-aos="fade-up"
-          className=" max-w-[400px] md:max-w-[1080px] mx-auto">
-          <div className=" flex justify-center mt-10 flex-wrap gap-4">
-            {portfolioDatas.map((project, index) => (
-              <CardProject
-                key={index} // Ensure you use a unique key for each mapped element
-                image={project.image}
-                title={project.title}
-                role={project.role}
-                desc={project.desc}
-                link={project.link}
-                skills={project.skills}
-              />
-            ))}
+          <div
+            data-aos="fade-up"
+            className=" max-w-[400px] md:max-w-[1080px] mx-auto">
+            <div className=" flex justify-center mt-10 flex-wrap gap-4">
+              {portfolioDatas.map((project, index) => (
+                <CardProject
+                  key={index} // Ensure you use a unique key for each mapped element
+                  image={project.image}
+                  title={project.title}
+                  alt={project.title + " by Afix Vega Praditya"}
+                  role={project.role}
+                  desc={project.desc}
+                  link={project.link}
+                  skills={project.skills}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

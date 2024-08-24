@@ -43,7 +43,7 @@ export default function ContactMe() {
       <BgStyle />
       <div className="flex items-center mt-0 md:mt-8 gap-10 justify-center py-10 px-6 md:px-10 flex-col md:flex-row max-h-screen max-w-[1080px] mx-auto">
         <div data-aos="fade-right" className="flex flex-start flex-col ">
-          <h3 className="text-[18px] items-center md:text-2xl">Dont Be Shy - Say Hi!</h3>
+          <h1 className="text-[18px] items-center md:text-2xl">Dont Be Shy - Say Hi!</h1>
           <h2 className="text-[28px] leading-[1.1] mt-1 md:text-4xl">Get in Touch with Me!</h2>
           <p className="text-c-body text-xs md:text-base  font-normal mt-2">lets rocket towards success and turn your ideas into something extraordinary! 🚀 🌟</p>
           <ul className="flex flex-1/2 text-xl md:text-2xl mt-4 gap-4 [&>li]:text-white [&>li:hover]:text-c-body-fade [&>li>a]:transition-all">

@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Afix Vega Praditya - Portfolio</title>
+        <title>Afix Vega - Portfolio</title>
         <meta
           name="description"
           content="Afix Vega Praditya - Information Engineering Undergraduate Student. Explore the future with captivating UI/UX design and front-end abilities."
@@ -50,9 +50,9 @@ const Hero = () => {
           height="150"
         />
         <div className="flex items-center mx-auto">
-          <h2 className=" text-center font-semibold mt-3 text-4xl">
+          <h1 className=" text-center font-semibold mt-3 text-4xl">
             Hi, I am Afix
-          </h2>
+          </h1>
           <span className="text-center text-4xl animate-waving flex justify-center">
             👋
           </span>
@@ -61,10 +61,10 @@ const Hero = () => {
         <p className="text-center text-body">
           Information Engineering Undergraduate Student
         </p>
-        <h1 className="font-semibold mx-10 text-[28px] md:text-[40px] max-w-[400px] md:max-w-[600px] text-center heigh leading-tight mt-6">
+        <h2 className="font-semibold mx-10 text-[28px] md:text-[40px] max-w-[400px] md:max-w-[600px] text-center heigh leading-tight mt-6">
           Explore the future with captivating UI/UX design and front-end
           abilities.
-        </h1>
+        </h2>
         <Link href="#about">
           <Image
             className="mt-20 animate-bounce pointer-events-none"

@@ -31,19 +31,22 @@ export default function CardProject({
   desc,
   link,
   skills,
+  alt = title,
 }) {
   return (
     <>
       <div
-        className={`${className} backdrop-blur-sm flex flex-col rounded-xl w-full  md:w-[30%] bgCard hover:-translate-y-1.5  hover:opacity-80 transition-all`}>
+        className={`${className} backdrop-blur-sm flex flex-col group rounded-xl w-full md:w-[30%] bgCard hover:opacity-80 transition-all`}>
         <Link href={link} target="_blank">
-          <Image
-            className="rounded-t-xl w-full h-[160px] object-cover"
-            src={image}
-            width="500"
-            height="500"
-            alt={title}
-          />
+          <div className="overflow-hidden rounded-t-xl">
+            <Image
+              className="w-full h-[160px] object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+              src={image}
+              width="500"
+              height="500"
+              alt={alt}
+            />
+          </div>
         </Link>
         <Link
           href={link}
@@ -67,7 +70,7 @@ export default function CardProject({
                 data-tooltip-content={skill}>
                 <Image
                   src={skillIcons[skill]}
-                  alt={skill}
+                  alt={skills}
                   width={20}
                   height={20}
                   className="object-contain"
