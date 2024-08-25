@@ -7,7 +7,7 @@ import CardBlog from "@/components/cardBlog";
 import BgStyle from "@/components/bgstyle";
 import Head from "next/head";
 
-export default function Home({ portfolioDatas }) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -29,7 +29,7 @@ export default function Home({ portfolioDatas }) {
         <BgStyle pageID={"home"} />
         <Hero />
         <About />
-        <Projects portfolioDatas={portfolioDatas} />
+        <Projects />
         <Skills />
       </div>
     </>
@@ -108,7 +108,33 @@ const About = () => {
   );
 };
 
-const Projects = ({ portfolioDatas }) => {
+const Projects = () => {
+  const portfolioDatas = [
+    {
+      image: "/portfolio/Rentalin.jpg",
+      title: "Rentalin",
+      role: "Full Stack Developer",
+      desc: "Website untuk tugas mata kuliah Pemrograman Web yang dibuat menggunakan ExpressJS dan NextJS",
+      link: "https://paw-kelompok-11-client.vercel.app/",
+      skills: ["NextJs", "Tailwind", "MongoDB"],
+    },
+    {
+      image: "/portfolio/Damar.jpg",
+      title: "DAMAR",
+      role: "Fullstack Developer & UI/UX Designer",
+      desc: "Aplikasi pelaporan jalan rusak, terdapat mobile app menggunakan React Native dan website sebagai dashboard.",
+      link: "https://github.com/Damar-C05/damar-mobile-app",
+      skills: ["ReactNative", "Laravel", "Python"],
+    },
+    {
+      image: "/portfolio/Findit2022.jpg",
+      title: "FindIT! UGM 2022 Website",
+      role: "Frontend Developer & UI/UX Designer",
+      desc: "Website FindIT! UGM 2022 saya bertugas membuat landing page serta user interfacenya.",
+      link: "https://github.com/jovianjr/frontend-findit22",
+      skills: ["React", "Tailwind", "Figma"],
+    },
+  ];
   return (
     <>
       <div className="md:max-w-[1080px] mx-auto px-10 mt-20">
@@ -121,12 +147,14 @@ const Projects = ({ portfolioDatas }) => {
               skills I have developed.
             </p>
           </div>
-        </div>
-        <div className="max-w-[400px] md:max-w-[1080px] mx-auto">
-          <div className=" grid grid-cols-1 md:grid-cols-3 mt-10 flex-wrap gap-4">
+        </div>  
+        <div
+          data-aos="fade-right"
+          className="max-w-[400px] md:max-w-[1080px] mx-auto">
+          <div className=" mt-10 grid grid-cols-1 md:grid-cols-3 gap-4">
             {portfolioDatas.map((data, index) => (
               <CardProject
-                dataAos="fade-right"
+                dataAos={"fade-right"}
                 dataAosDelay={index * 100}
                 key={index}
                 image={data.image}
@@ -227,16 +255,3 @@ const Blog = () => {
     </>
   );
 };
-
-export async function getServerSideProps() {
-  const res = await fetch(`${process.env.APP_URL}/api/portfolio`);
-  const portfolioDatas = await res.json();
-
-  const limitedPortfolioDatas = portfolioDatas.slice(0, 3);
-
-  return {
-    props: {
-      portfolioDatas: limitedPortfolioDatas,
-    },
-  };
-}
