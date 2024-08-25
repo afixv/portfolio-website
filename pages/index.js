@@ -229,7 +229,7 @@ const Blog = () => {
 };
 
 export async function getServerSideProps() {
-  const res = await fetch(`${process.env.APP_URL}/api/portfolio`);
+  const res = await fetch(`https://afix-vega.vercel.app/api/portfolio`);
   const portfolioDatas = await res.json();
 
   const limitedPortfolioDatas = portfolioDatas.slice(0, 3);

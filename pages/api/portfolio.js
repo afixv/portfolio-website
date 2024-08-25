@@ -10,7 +10,7 @@ export default async function handler(req, res) {
 
     res.status(200).json(portfolios);
   } catch (e) {
-    console.error("Error fetching portfolio data:", e);
+    console.error(e);
     res.status(500).json({ message: "Internal Server Error" });
   }
 }
