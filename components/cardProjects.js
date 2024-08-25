@@ -32,11 +32,15 @@ export default function CardProject({
   link,
   skills,
   alt = title,
+  dataAos,
+  dataAosDelay,
 }) {
   return (
     <>
       <div
-        className={`${className} backdrop-blur-sm flex flex-col group rounded-xl w-full md:w-[30%] bgCard hover:opacity-80 transition-all`}>
+        data-aos={dataAos}
+        data-aos-delay={dataAosDelay}
+        className={`${className} backdrop-blur-sm flex flex-col group rounded-xl w-full bgCard hover:opacity-80 transition-all`}>
         <Link href={link} target="_blank">
           <div className="overflow-hidden rounded-t-xl">
             <Image
