@@ -229,35 +229,14 @@ const Blog = () => {
 };
 
 export async function getServerSideProps() {
-  const baseUrl = process.env.APP_URL;
+  const res = await fetch(`${process.env.APP_URL}/api/portfolio`);
+  const portfolioDatas = await res.json();
 
-  if (!baseUrl) {
-    return {
-      notFound: true,
-    };
-  }
+  const limitedPortfolioDatas = portfolioDatas.slice(0, 3);
 
-  try {
-    const res = await fetch(`${baseUrl}/api/portfolio`);
-
-    if (!res.ok) {
-      throw new Error("Network response was not ok");
-    }
-
-    const portfolioDatas = await res.json();
-
-    const limitedPortfolioDatas = portfolioDatas.slice(0, 3);
-
-    return {
-      props: {
-        portfolioDatas: limitedPortfolioDatas,
-      },
-    };
-  } catch (error) {
-    console.error("Failed to fetch portfolio data:", error);
-
-    return {
-      notFound: true,
-    };
-  }
+  return {
+    props: {
+      portfolioDatas: limitedPortfolioDatas,
+    },
+  };
 }
