@@ -146,11 +146,12 @@ export default function Projects() {
           </button>
         </div> */}
           <div
-            data-aos="fade-up"
             className=" max-w-[400px] md:max-w-[1080px] mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 mt-10 gap-4">
               {paginatedProjects.map((data, index) => (
                 <CardProject
+                  dataAos={"fade-right"}
+                  dataAosDelay={index * 100}
                   key={index}
                   image={data.image}
                   title={data.title}

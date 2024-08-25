@@ -149,7 +149,6 @@ const Projects = () => {
           </div>
         </div>  
         <div
-          data-aos="fade-right"
           className="max-w-[400px] md:max-w-[1080px] mx-auto">
           <div className=" mt-10 grid grid-cols-1 md:grid-cols-3 gap-4">
             {portfolioDatas.map((data, index) => (
