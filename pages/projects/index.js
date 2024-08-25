@@ -150,12 +150,33 @@ export default function Projects({ portfolioDatas }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/portfolio`);
-  const portfolioDatas = await res.json();
+  const baseUrl = process.env.APP_URL;
 
-  return {
-    props: {
-      portfolioDatas,
-    },
-  };
+  if (!baseUrl) {
+    return {
+      notFound: true,
+    };
+  }
+
+  try {
+    const res = await fetch(`${baseUrl}/api/portfolio`);
+
+    if (!res.ok) {
+      throw new Error("Network response was not ok");
+    }
+
+    const portfolioDatas = await res.json();
+
+    return {
+      props: {
+        portfolioDatas: portfolioDatas,
+      },
+    };
+  } catch (error) {
+    console.error("Failed to fetch portfolio data:", error);
+
+    return {
+      notFound: true,
+    };
+  }
 }
