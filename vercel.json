@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/contact",
+      "destination": "https://afix.works/about",
+      "permanent": true
+    },
+    {
       "source": "/(.*)",
       "destination": "https://afix.works/$1",
       "permanent": true
